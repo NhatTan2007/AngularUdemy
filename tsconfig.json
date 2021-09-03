@@ -5,7 +5,13 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "strict": false,
+    "paths": {
+      "@_shared/*": ["src/app/_shared/*"],
+      "@recipes/*": ["src/app/recipes/*"],
+      "@shopping/*": ["src/app/shopping/*"],
+      "@assets/*": ["src/assets/*"]
+    },
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
