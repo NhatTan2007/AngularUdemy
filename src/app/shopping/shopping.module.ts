@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from "@angular/forms";
 
 import { ShoppingRoutingModule } from './shopping-routing.module';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
@@ -15,7 +16,11 @@ import { ShoppingComponent } from './shopping.component';
   ],
   imports: [
     CommonModule,
-    ShoppingRoutingModule
+    ShoppingRoutingModule,
+    FormsModule
+  ],
+  exports: [
+    ShoppingComponent
   ]
 })
 export class ShoppingModule { }

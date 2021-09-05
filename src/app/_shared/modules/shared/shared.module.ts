@@ -5,10 +5,15 @@ import { SharedRoutingModule } from './shared-routing.module';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from '@_shared/components/header/header.component';
+import { NavbarComponent } from '@_shared/components/navbar/navbar.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    HeaderComponent,
+    NavbarComponent,
+  ],
   imports: [
     CommonModule,
     SharedRoutingModule,
@@ -20,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     BsDropdownModule,
     CommonModule,
     FormsModule,
-    CollapseModule
+    CollapseModule,
+    HeaderComponent
   ]
 })
 export class SharedModule { }

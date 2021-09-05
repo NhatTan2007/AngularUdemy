@@ -8,25 +8,27 @@ import { AppComponent } from './app.component';
 import { SharedModule } from "@_shared/modules/shared/shared.module";
 
 // Components import
-import { HeaderComponent } from '@_shared/components/header/header.component';
-import { NavbarComponent } from './_shared/components/navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
 
 // Library import
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RecipesModule } from '@recipes/recipes.module';
+import { ShoppingModule } from '@shopping/shopping.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    NavbarComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    SharedModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        SharedModule,
+        RecipesModule,
+        ShoppingModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

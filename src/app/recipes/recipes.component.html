@@ -1,1 +1,23 @@
-<app-recipe-list></app-recipe-list>
+<div class="row mr-0 ml-0">
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-12">
+                <button class="btn btn-success">New Recipe</button>
+            </div>
+        </div>
+
+        <hr />
+
+        <app-recipe-list
+            *ngFor="let recipe of recipes"
+            [recipeData]="recipe"
+            (recipeSelected)="bindingRecipeDetail($event)"
+        ></app-recipe-list>
+    </div>
+    <div class="col-md-7">
+        <app-recipe-detail [recipe]="recipeSelected" *ngIf="recipeSelected; else infoText"></app-recipe-detail>
+        <ng-template #infoText>
+            <a class="btn btn-primary col-12">Please select a Recipe</a>
+        </ng-template>
+    </div>
+</div>
