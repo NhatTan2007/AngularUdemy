@@ -1,0 +1,31 @@
+<div class="col-12 list-group rounded-0 pr-0">
+    <a
+        class="
+            list-group-item
+            d-flex
+            justify-content-between
+            align-items-center
+            text-decoration-none
+            list-group-item-action
+        "
+        routerLink="detail/{{recipe.id}}"
+        routerLinkActive="active"
+    >
+        <div>
+            <h4 appTesting class="font-weight-bold">
+                {{ recipe.name }}
+            </h4>
+            <p class="mb-0">
+                {{ recipe.description }}
+            </p>
+        </div>
+        <span>
+            <img
+                [src]="recipe.imagePath"
+                [alt]="recipe.name"
+                class="img-fluid"
+                style="max-height: 70px"
+            />
+        </span>
+    </a>
+</div>

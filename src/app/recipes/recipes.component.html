@@ -8,16 +8,9 @@
 
         <hr />
 
-        <app-recipe-list
-            *ngFor="let recipe of recipes"
-            [recipeData]="recipe"
-            (recipeSelected)="bindingRecipeDetail($event)"
-        ></app-recipe-list>
+        <app-recipe-list></app-recipe-list>
     </div>
     <div class="col-md-7">
-        <app-recipe-detail [recipe]="recipeSelected" *ngIf="recipeSelected; else infoText"></app-recipe-detail>
-        <ng-template #infoText>
-            <a class="btn btn-primary col-12">Please select a Recipe</a>
-        </ng-template>
+        <router-outlet></router-outlet>
     </div>
 </div>
