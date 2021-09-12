@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { SharedModule } from "@_shared/modules/shared/shared.module";
 
 // Components import
-import { HomeComponent } from './home/home.component';
 
 // Library import
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,8 +16,7 @@ import { ShoppingModule } from '@shopping/shopping.module';
 
 @NgModule({
     declarations: [
-        AppComponent,
-        HomeComponent
+        AppComponent
     ],
     imports: [
         BrowserModule,

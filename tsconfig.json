@@ -10,6 +10,7 @@
       "@_shared/*": ["src/app/_shared/*"],
       "@recipes/*": ["src/app/recipes/*"],
       "@shopping/*": ["src/app/shopping/*"],
+      "@errors/*": ["src/app/errors/*"],
       "@assets/*": ["src/assets/*"]
     },
     "noImplicitReturns": true,
